@@ -1,0 +1,372 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.color {
+  color: skyblue;
+}
+
+.color1 {
+  color:rgb(6, 80, 53);
+}
+
+input {
+  margin-bottom: 20px;
+}
+
+.nav-link.active {
+  color: lightgreen !important;
+}
+
+body::before {
+  height: 1400px;
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* https://images.pexels.com/photos/326212/pexels-photo-326212.jpeg?auto=compress&cs=tinysrgb&w=400 */
+  /* https://images.pexels.com/photos/2310713/pexels-photo-2310713.jpeg?auto=compress&cs=tinysrgb&w=400 */
+  background-image: url('https://images.pexels.com/photos/326212/pexels-photo-326212.jpeg?auto=compress&cs=tinysrgb&w=400');
+  background-size: 100% 100%;
+  background-color: blue; /* This will be covered by the image unless the image is transparent */
+  opacity: 0.2; /* This only affects the pseudo-element, not any child elements */
+  z-index: -1;
+}
+
+.header-image {
+  width: 100%;
+  height: 400px;
+  background-image: url('https://images.pexels.com/photos/6195111/pexels-photo-6195111.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  z-index: 1;
+}
+
+.afterHeader {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  z-index: 1;
+}
+
+.info {
+  width: 60%;
+  height: 100%;
+  background-color: rgb(34, 34, 33);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10; /* Ensures it's above the pseudo-element */
+  color: #fff;
+  padding: 60px;
+}
+
+.afterHead-right {
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10; /* Ensures it's above the pseudo-element */
+  color: #090909;
+  padding: 60px;
+}
+
+.container-info {
+  width: 100vw;
+  min-height: 600px;
+  background-color: #e2e2e2;
+  padding-top: 20px;
+  position: relative;
+  border-bottom: 1px solid #453f3f;
+}
+
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 0;
+  width: 80%;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    rgb(0, 166, 255),
+    #f0f
+  ); /* Adjusted margin */
+  margin: auto;
+  border-radius: 10px;
+}
+
+hr.small {
+  width: 30%;
+}
+
+hr.btm {
+  position: absolute;
+  left: 10%;
+  top: 1600px;
+}
+
+.heading {
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 40px;
+  font-size: 30px; /* Large size */
+  font-weight: 300; /* Extra boldness */
+  color: #757373;
+}
+
+.circle-info {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.therapy-type {
+  width: 240px;
+  height: 460px;
+}
+
+.circle {
+  width: 240px;
+  height: 240px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease; /* Smooth transition for size change */
+}
+
+.hover-effect {
+  background-color: blue; /* Example hover state style */
+  transition: all 0.3s ease; /* Smooth transition */
+  z-index: 10;
+}
+
+.bussiness-map {
+  width: 80%;
+  height: 90%;
+  background-color: red;
+  margin: 40px auto;
+}
+
+.title {
+  position: absolute;
+  top: 220px;
+  left: 20px;
+  font-size: 20px;
+}
+
+.about-container {
+  width: 100%;
+  min-height: 700px;
+  background-color: beige;
+  padding: 30px;
+  position: relative;
+}
+
+.about-left {
+  width: 40%;
+  height: 500px;
+  background-image: url('https://images.pexels.com/photos/813940/pexels-photo-813940.jpeg?auto=compress&cs=tinysrgb&w=800');
+  background-size: 100% 100%;
+  border: 2px solid rgb(178, 175, 175);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 30px;
+  left: 100px;
+}
+
+.about-right {
+  width: 50%;
+  height: 540px;
+  padding: 50px;
+  background-color: #f6f2f2;
+  border: 2px solid rgb(158, 150, 150);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50px;
+  right: 100px;
+}
+
+/* Calendar styling */
+header {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.calendar-grid {
+  width: 98%;
+  margin: 20px auto;
+  border: 1px solid green;
+  padding: 10px;
+  background-color: beige;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 days a week */
+  grid-gap: 5px;
+  text-align: center;
+}
+
+.calendar-day,
+.calendar-day-name {
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: rgb(67, 65, 67);
+  color: #fff;
+  min-height: 50px; /* Adjust based on your preference */
+}
+
+.calendar-day-name {
+  /* background-color: #f0f0f0; */
+  font-weight: bold;
+}
+
+.day {
+  border: 1px solid gray;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.day.today {
+  background-color: rgb(6, 80, 53);
+  color: #fff;
+}
+
+.day:hover {
+  background-color: rgb(14, 221, 152);
+}
+
+.day.empty:hover {
+  background-color: transparent;
+}
+
+.empty {
+  border: 0px;
+}
+
+.day.selected {
+  background-color: rgb(68, 144, 27);
+}
+
+.login-reg {
+  color: white;
+}
+
+.loadingSpinnerContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingSpinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #000 transparent #555 transparent;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+footer {
+  width: 100vw;
+  height: 400px;
+  background-color: black;
+  padding-top: 20px;
+}
+
+.footer-container {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+
+.footer-left {
+  width: 46%;
+  padding: 20px;
+}
+
+.footer-right {
+  width: 50%;
+  padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .afterHeader {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info {
+    width: 100%;
+  }
+
+  .afterHead-right {
+    display: none;
+  }
+
+  .circle {
+    width: 80%;
+    height: 300px;
+    margin: auto;
+  }
+
+  .circle-info {
+    flex-direction: column;
+  }
+
+  .therapy-type {
+    width: 90%;
+    margin: auto;
+  }
+
+  /* About page belowe */
+  .about-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-left {
+    position: static;
+    width: 98%;
+    margin: auto;
+  }
+
+  .about-right {
+    position: static;
+    width: 98%;
+    min-height: 800px;
+    margin: 20px auto;
+  }
+
+  .calendar-grid {
+    transform: scale(0.6); /* Adjust scale as needed */
+    transform-origin: top left;
+    width: 166%; /* Adjust width to compensate for scaling */
+    overflow-x: auto; /* Allow horizontal scrolling if necessary */
+    padding: 20px;
+  }
+
+  .form-box {
+    margin-top: -140px;
+  }
+}
